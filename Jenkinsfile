@@ -18,7 +18,7 @@ pipeline {
     
     stage('Checkout') {
             steps {
-                git branch: 'main', url: ''https://github.com/omdivekar14/dockerapp.git'
+                git branch: 'main', url: 'https://github.com/omdivekar14/dockerapp.git'
           }
         }
 
