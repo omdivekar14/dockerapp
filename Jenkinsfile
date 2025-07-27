@@ -63,13 +63,23 @@ pipeline {
                 }
             }
     
-        stage('Deploy') {
+        /*stage('Deploy') {
             steps {
                 echo 'Deploying....'
                 sh 'docker compose up -d'
                 sh 'docker compose ps'
                 sh 'docker logout $REGISTRY_URL'
             }
-        }
+        }*/
+        stage('Deploy') {
+  steps {
+    echo 'Deploying....'
+    sh 'pwd && ls -la'
+    sh 'docker compose up -d'
+    sh 'docker compose ps'
+    sh 'docker logout $REGISTRY_URL'
+  }
+}
+
     }
 }   
